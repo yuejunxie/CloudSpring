@@ -27,6 +27,7 @@
         <module>CloudZipkin</module>
         <module>CloudResource</module>
         <module>CloudNIO</module>
+        <module>CloudConsul</module>
     </modules>
 
     <dependencyManagement>
