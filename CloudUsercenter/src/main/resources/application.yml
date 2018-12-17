@@ -12,6 +12,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     enabled: true
-    service-url:  http://127.0.0.1:8888
+    service-url:
+      defaultZone: http://localhost:8888/eureka
   instance:
 #    default-address-resolution-order: http://127.0.0.1:8888
