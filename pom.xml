@@ -20,7 +20,7 @@
         <module>CloudUsercenter</module>
         <module>CloudConfig</module>
         <module>CloudZuul</module>
-        <module>CloudOpenFeign</module>
+        <module>CloudFeign</module>
         <module>CloudHystrix</module>
         <module>CloudTurbine</module>
         <module>CloudRibbon</module>
