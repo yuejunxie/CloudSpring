@@ -1,0 +1,17 @@
+server:
+  port: 6443
+  servlet:
+    context-path: /uc
+
+spring:
+  application:
+    name: usercenter
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    enabled: true
+    service-url:  http://127.0.0.1:8888
+  instance:
+#    default-address-resolution-order: http://127.0.0.1:8888
