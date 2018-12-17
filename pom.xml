@@ -28,6 +28,8 @@
         <module>CloudResource</module>
         <module>CloudNIO</module>
         <module>CloudConsul</module>
+        <module>CloudZookeeper</module>
+        <module>CloudGateway</module>
     </modules>
 
     <dependencyManagement>
