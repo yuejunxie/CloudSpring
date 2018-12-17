@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11a209be-4346-440c-8d6f-5b107d78e4d4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/CloudConfig/CloudConfig.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudConfig/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CloudConfig/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudEureka/CloudEureka.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudFeign/CloudFeign.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudHystrix/CloudHystrix.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudNIO/CloudNIO.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudResource/CloudResource.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudResource/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CloudResource/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudRibbon/CloudRibbon.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudSpring.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudTurbine/CloudTurbine.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudUsercenter/CloudUsercenter.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudUsercenter/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CloudUsercenter/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudUsercenter/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/CloudUsercenter/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudZipkin/CloudZipkin.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudZuul/CloudZuul.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CloudZuul/cloud.zuul.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CloudZuul/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/CloudZuul/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/CloudTurbine/target/" />
     <ignored path="$PROJECT_DIR$/CloudZipkin/target/" />
@@ -53,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CloudZuul/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="124">
+              <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -120,8 +103,8 @@
   <component name="MavenRunner">
     <option name="jreName" value="#JAVA_HOME" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="953" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -138,16 +121,6 @@
               <item name="cloud-spring" type="b2602c69:ProjectViewProjectNode" />
               <item name="CloudSpring" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="cloud-spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CloudSpring" type="462c0819:PsiDirectoryNode" />
-              <item name="CloudConfig" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cloud-spring" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CloudSpring" type="462c0819:PsiDirectoryNode" />
-              <item name="CloudZuul" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -159,7 +132,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545031441105" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545031950751" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="D:/Program Files/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -239,18 +212,18 @@
       <option name="presentableId" value="Default" />
       <updated>1545029845818</updated>
       <workItem from="1545029874826" duration="648000" />
-      <workItem from="1545030649320" duration="776000" />
+      <workItem from="1545030649320" duration="1177000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1424000" />
+    <option name="totallyTimeSpent" value="1825000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.5166297" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -343,8 +316,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CloudZuul/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="124">
+          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
         </state>
       </provider>
     </entry>
