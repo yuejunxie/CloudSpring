@@ -1,0 +1,18 @@
+server:
+  port: 3443
+  servlet:
+    context-path: /ribbon
+
+spring:
+  application:
+    name: ribbon
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8888/eureka
+  instance:
+    lease-expiration-duration-in-seconds: 90
+    lease-renewal-interval-in-seconds: 30
+

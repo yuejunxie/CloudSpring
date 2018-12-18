@@ -3,6 +3,7 @@ package org.mistycloud.openfeign;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
@@ -11,6 +12,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * @author xieyuejun
@@ -47,6 +50,15 @@ public class OpenFeignApplication {
 
     @GetMapping("/hello")
     public String helloG() {
+        List<ServiceInstance> instances = discoveryClient.getInstances("usercenter");
+        instances.forEach(instance -> {
+            System.out.println(instance.getInstanceId());
+            System.out.println(instance.getHost() +":"+ instance.getPort());
+            System.out.println(instance.getServiceId());
+            System.out.println(instance.getScheme());
+            System.out.println(instance.getUri());
+            instance.getMetadata().forEach((k, v) -> System.out.println(k + ":" + v));
+        });
         return "hello";
     }
 

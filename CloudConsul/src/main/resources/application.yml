@@ -1,0 +1,27 @@
+server:
+  port: 5555
+  servlet:
+    context-path: /consul
+
+spring:
+  application:
+    name: consul
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        enabled: false
+        register: true
+
+endpoints:
+  restart:
+    enabled: true
+
+management:
+  security:
+
+logging:
+  level:
+    org.springframework.cloud.consul: DEBUG
+
