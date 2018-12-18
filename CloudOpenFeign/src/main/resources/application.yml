@@ -1,0 +1,15 @@
+server:
+  port: 4443
+  servlet:
+    context-path: /openfeign
+
+spring:
+  application:
+    name: openfeign
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8888/eureka
+

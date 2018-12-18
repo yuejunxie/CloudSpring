@@ -14,5 +14,7 @@ eureka:
     enabled: true
     service-url:
       defaultZone: http://localhost:8888/eureka
+    heartbeat-executor-thread-pool-size: 2
+#    heartbeat-executor-exponential-back-off-bound:
   instance:
 #    default-address-resolution-order: http://127.0.0.1:8888
