@@ -1,0 +1,30 @@
+#server:
+#  port: 7443
+#
+#spring:
+#  application:
+#    name: zkcenter
+#
+#  cloud:
+#    zookeeper:
+#      connect-string: localhost:2181
+#      discovery:
+#        instance-host: localhost
+#        instance-port: 7443
+
+
+server:
+  port: 7443
+  servlet:
+    context-path: /zk
+
+spring:
+  cloud:
+    zookeeper:
+      connect-string: localhost:2181
+      discovery:
+        instance-host: localhost
+        instance-port: 7443
+        enabled: true
+  application:
+    name: zkCenter

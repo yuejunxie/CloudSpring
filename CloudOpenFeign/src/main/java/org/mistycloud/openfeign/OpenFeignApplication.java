@@ -52,7 +52,7 @@ public class OpenFeignApplication {
     public String helloG() {
         List<ServiceInstance> instances = discoveryClient.getInstances("usercenter");
         instances.forEach(instance -> {
-            System.out.println(instance.getInstanceId());
+//            System.out.println(instance.getInstanceId());
             System.out.println(instance.getHost() +":"+ instance.getPort());
             System.out.println(instance.getServiceId());
             System.out.println(instance.getScheme());
