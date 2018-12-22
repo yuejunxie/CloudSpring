@@ -1,0 +1,27 @@
+server:
+  port: 7777
+
+spring:
+  application:
+    name: config-center
+  cloud:
+    config:
+      enabled: true
+      server:
+        git:
+          basedir:
+          uri:
+          username:
+          password:
+          default-label
+eureka:
+  instance:
+    lease-expiration-duration-in-seconds: 90
+    hostname:
+    instance-id: 
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    enabled: true
+    service-url:
+      defaultZone: 127.0.0.1:8888/eureka
