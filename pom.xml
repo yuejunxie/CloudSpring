@@ -10,11 +10,11 @@
         <version>RELEASE</version>
     </parent>
 
-
     <groupId>org.mistycloud.cloud</groupId>
     <artifactId>cloud-spring</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+
     <modules>
         <module>CloudEureka</module>
         <module>CloudUsercenter</module>
@@ -30,6 +30,7 @@
         <module>CloudConsul</module>
         <module>CloudZookeeper</module>
         <module>CloudGateway</module>
+        <module>CloudPortal</module>
     </modules>
 
     <dependencyManagement>

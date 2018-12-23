@@ -1,19 +1,20 @@
 server:
   port: 8888
+spring:
+  application:
+    name: EUREKASERVER
+
 eureka:
   dashboard:
     enabled: true
   instance:
-    hostname: localhost
+    hostname: LOCALHOST
+    instance-id: ${eureka.instance.hostname}-${spring.application.name}:${server.port}-@project.version@
   client:
     register-with-eureka: false
     fetch-registry: false
     service-url:
       defaultZone: http://localhost:8888/eureka/
-  #    service-url：http://localhost:8888/eureka/
   server:
     enable-self-preservation: false
-    wait-time-in-ms-when-sync-empty: 30000
-spring:
-  application:
-    name: eureka-server
+#    wait-time-in-ms-when-sync-empty: 30000

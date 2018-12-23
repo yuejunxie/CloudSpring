@@ -1,0 +1,66 @@
+server:
+  port: 3443
+  servlet:
+    context-path: /hystrix
+spring:
+  application:
+    name: HYSTRIX
+  #配置中心配置
+  cloud:
+    config:
+      profile: dev
+      name: hystrix
+      discovery:
+        enabled: true
+        service-id: CONFIGCENTER
+#EUREKA_CLIENT配置
+eureka:
+  instance:
+    hostname: LOCALHOST
+    instance-id: ${eureka.instance.hostname}-${spring.application.name}:${server.port}-@project.version@
+    prefer-ip-address: true
+    #服务续和过期
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 90
+    #ACTUATOR路径增加CONTEXT_PATH
+    home-page-url-path: ${server.servlet.context-path}
+    status-page-url-path: ${server.servlet.context-path}/actuator/info
+    health-check-url-path: ${server.servlet.context-path}/actuator/health
+  client:
+    enabled: true
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8888/eureka/
+    heartbeat-executor-thread-pool-size: 2
+    heartbeat-executor-exponential-back-off-bound: 10
+#开启熔断
+feign:
+  hystrix:
+    enabled: true
+
+service-hi:
+  ribbon:
+    ReadTimeout: 2000
+    ConnectTimeout: 1000
+    MaxAutoRetries: 1
+    MaxAutoRetriesNextServer: 1
+
+
+hystrix:
+  dashboard:
+    enable-ignore-connection-close-header: true
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: true
+        isolation:
+          thread:
+            timeoutInMilliseconds: 800
+#ACTUATOR开启所有端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

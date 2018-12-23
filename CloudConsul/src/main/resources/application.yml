@@ -10,6 +10,8 @@ spring:
     consul:
       host: 127.0.0.1
       port: 8500
+      discovery:
+        hostname: xieyuejun
 #      discovery:
 #        enabled: false
 #        register: true

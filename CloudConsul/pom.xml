@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud.consul</artifactId>
+    <artifactId>cloud-consul</artifactId>
 
     <dependencies>
         <dependency>

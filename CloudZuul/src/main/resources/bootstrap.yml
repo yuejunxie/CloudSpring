@@ -1,0 +1,55 @@
+server:
+  port: 9999
+  servlet:
+    context-path: /
+spring:
+  application:
+    name: ZUUL
+  cloud:
+    config:
+      #PROFILE
+      profile: dev
+      name: zuul
+      discovery:
+        enabled: true
+        #配置中心SERVICE_ID
+        service-id: CONFIGCENTER
+eureka:
+  instance:
+    hostname: LOCALHOST
+    instance-id: ${eureka.instance.hostname}-${spring.application.name}:${server.port}-@project.version@
+    prefer-ip-address: true
+    lease-expiration-duration-in-seconds: 90
+    lease-renewal-interval-in-seconds: 30
+    #ACTUATOR 路径增加CONTEXT_PATH
+    home-page-url-path: ${server.servlet.context-path}
+    status-page-url-path: ${server.servlet.context-path}/actuator/info
+    health-check-url-path: ${server.servlet.context-path}/actuator/health
+  client:
+    enabled: true
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8888/eureka/
+    heartbeat-executor-thread-pool-size: 2
+    heartbeat-executor-exponential-back-off-bound: 10
+#ACTUATOR开启所有端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+zuul:
+  routes:
+    portal:
+      path: /portal/**
+      serviceId: PORTAL
+    hystrix:
+      path: /hystrix/**
+      serviceId: HYSTRIX
+    configServer:
+      path: /configServer/**
+      serviceId: CONFIGSERVER
+    eurekaServer:
+      path: /eurekaServer/**
+      serviceId: EUREKASERVER

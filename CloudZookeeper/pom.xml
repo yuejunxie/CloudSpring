@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud.zookeeper</artifactId>
+    <artifactId>cloud-zookeeper</artifactId>
 
     <dependencies>
         <dependency>

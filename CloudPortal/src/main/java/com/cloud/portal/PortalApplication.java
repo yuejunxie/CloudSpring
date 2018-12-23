@@ -1,20 +1,21 @@
-package org.mistycloud.cloud.zuul;
+package com.cloud.portal;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 /**
- * @author xieyuejun
- * @created 2018/4/12 15:35
+ * Author: JackyShieh
+ * Corporation: CornerStone LTD
+ * WE LINK
+ * cloud-spring
+ * Created: 2018/12/22 22:44
+ * Description:
  */
-@EnableZuulProxy
-@EnableDiscoveryClient
 @SpringBootApplication
-public class ZuulApplication {
-
+@EnableDiscoveryClient
+public class PortalApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ZuulApplication.class, args);
+        SpringApplication.run(PortalApplication.class, args);
     }
 }

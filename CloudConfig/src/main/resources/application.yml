@@ -1,27 +1,49 @@
 server:
-  port: 7777
+  #端口
+  port: 6080
+  servlet:
+    context-path: /configCenter
 
 spring:
   application:
-    name: config-center
+    #服务名称
+    name: CONFIGCENTER
   cloud:
     config:
       enabled: true
       server:
         git:
-          basedir:
-          uri:
-          username:
-          password:
-          default-label
+          #Git仓库地址
+          uri: https://gitee.com/pebblerock/CloudConfig.git
+          #配置文件夹
+#          basedir: SpringCloud
+          #用户名密码
+#          username: xieyuejun
+#          password: 19920408xyj
+          search-paths:
+            - SpringCloud
+          #分支
+          default-label: master
 eureka:
   instance:
+    hostname: LOCALHOST
+    instance-id: ${eureka.instance.hostname}-${spring.application.name}:${server.port}-@project.version@
+    prefer-ip-address: true
     lease-expiration-duration-in-seconds: 90
-    hostname:
-    instance-id: 
+    lease-renewal-interval-in-seconds: 30
+    metadata-map:
+      configPath: ${server.servlet.context-path}
+#      management:
+#        context-path: ${server.servlet.context-path}/actuator
+    #ACTUATOR
+    home-page-url-path: ${server.servlet.context-path}
+    health-check-url-path: ${server.servlet.context-path}/actuator/health
+    status-page-url-path: ${server.servlet.context-path}/actuator/info
   client:
+    enabled: true
     register-with-eureka: true
     fetch-registry: true
-    enabled: true
     service-url:
-      defaultZone: 127.0.0.1:8888/eureka
+      defaultZone: http://localhost:8888/eureka/
+    heartbeat-executor-thread-pool-size: 2
+    heartbeat-executor-exponential-back-off-bound: 10
