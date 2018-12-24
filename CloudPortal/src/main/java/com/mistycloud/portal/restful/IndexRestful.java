@@ -4,6 +4,7 @@ import com.mistycloud.portal.vo.UserVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -27,8 +28,9 @@ import java.util.stream.Collectors;
  * Description:
  */
 @RefreshScope
-@Api("主页接口")
+@Api(tags = "主页Restful",description = "主页接口")
 @RestController
+@Slf4j
 @RequestMapping(produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 public class IndexRestful {
 
@@ -46,6 +48,7 @@ public class IndexRestful {
 
     @GetMapping("/client")
     @ApiOperation("元数据列表")
+    @ApiImplicitParam(value = "服务ID")
     public List<Map<String, String>> getMetadata(String serviceId) {
         return discoveryClient.getInstances(serviceId).parallelStream().map(instance -> instance.getMetadata()).collect(Collectors.toList());
     }
@@ -62,6 +65,7 @@ public class IndexRestful {
     @ApiImplicitParam(name = "userId", value = "用户ID")
     public UserVO getUser(@PathVariable String userId) {
         UserVO user = new UserVO("name", "account", "id");
+        log.error(user.toString());
         return user;
     }
 }

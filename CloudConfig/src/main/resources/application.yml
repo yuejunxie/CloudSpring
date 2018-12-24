@@ -47,3 +47,9 @@ eureka:
       defaultZone: http://localhost:8888/eureka/
     heartbeat-executor-thread-pool-size: 2
     heartbeat-executor-exponential-back-off-bound: 10
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

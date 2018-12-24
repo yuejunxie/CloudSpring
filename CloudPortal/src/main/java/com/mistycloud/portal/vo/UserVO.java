@@ -1,5 +1,6 @@
 package com.mistycloud.portal.vo;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
@@ -11,6 +12,7 @@ import lombok.Data;
  * Description:
  */
 @Data
+@AllArgsConstructor
 public class UserVO {
 
     private String userName;
@@ -18,13 +20,4 @@ public class UserVO {
     private String account;
 
     private String userId;
-
-    public UserVO() {
-    }
-
-    public UserVO(String userName, String account, String userId) {
-        this.userName = userName;
-        this.account = account;
-        this.userId = userId;
-    }
 }

@@ -31,6 +31,8 @@
         <module>CloudZookeeper</module>
         <module>CloudGateway</module>
         <module>CloudPortal</module>
+        <module>CloudBus</module>
+        <module>CloudStream</module>
     </modules>
 
     <dependencyManagement>
