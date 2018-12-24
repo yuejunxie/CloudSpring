@@ -18,8 +18,8 @@ spring:
           #配置文件夹
 #          basedir: SpringCloud
           #用户名密码
-#          username: xieyuejun
-#          password: 19920408xyj
+#          username:
+#          password:
           search-paths:
             - SpringCloud
           #分支
