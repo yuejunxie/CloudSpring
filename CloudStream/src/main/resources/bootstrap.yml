@@ -1,0 +1,55 @@
+server:
+  port: 7333
+  servlet:
+    context-path: /stream
+
+spring:
+  application:
+    name: STREAM
+  cloud:
+    config:
+      name: stream
+      profile: dev
+      discovery:
+        enabled: true
+        service-id: CONFIGCENTER
+#    #消费者
+#    stream:
+#      bindings:
+#        #指定管道名
+#        cloud_stream:
+#          #指定应用实例属于stream消费组
+#          group: stream
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: JackyShieh
+    password: 1001
+    virtual-host: xyj
+
+#EUREKA-CLIENT配置
+eureka:
+  instance:
+    hostname: LOCALHOST
+    instance-id: ${eureka.instance.hostname}-${spring.application.name}:${server.port}-@project.version@
+    prefer-ip-address: true
+    lease-expiration-duration-in-seconds: 90
+    lease-renewal-interval-in-seconds: 30
+    #ACTUATOR 路径增加CONTEXT_PATH
+    home-page-url-path: ${server.servlet.context-path}
+    status-page-url-path: ${server.servlet.context-path}/actuator/info
+    health-check-url-path: ${server.servlet.context-path}/actuator/health
+  client:
+    enabled: true
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8888/eureka/
+    heartbeat-executor-thread-pool-size: 2
+    heartbeat-executor-exponential-back-off-bound: 10
+#ACTUATOR开启所有端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

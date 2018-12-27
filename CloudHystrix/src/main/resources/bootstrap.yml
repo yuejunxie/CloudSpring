@@ -13,6 +13,23 @@ spring:
       discovery:
         enabled: true
         service-id: CONFIGCENTER
+    stream:
+      kafka:
+        binder:
+          brokers: 127.0.0.1:9092,
+          zk-nodes: 127.0.0.1:2181,
+          min-partition-count: 1
+          auto-create-topics: true
+          auto-add-partitions: true
+      #消费者
+      bindings:
+        input:
+          destination:
+          group: s1
+          consumer:
+            autoCommitOffset: false
+            concurrency: 1
+            partitioned: false
 #EUREKA_CLIENT配置
 eureka:
   instance:
@@ -64,3 +81,5 @@ management:
     web:
       exposure:
         include: "*"
+
+#Stream
