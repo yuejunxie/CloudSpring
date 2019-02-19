@@ -4,6 +4,8 @@ server:
     context-path: /uc
 
 spring:
+  profiles:
+    active: prod
   application:
     name: usercenter
 
@@ -18,3 +20,5 @@ eureka:
 #    heartbeat-executor-exponential-back-off-bound:
   instance:
 #    default-address-resolution-order: http://127.0.0.1:8888
+logging:
+  config: ${user.dir}/config/logback.xml
