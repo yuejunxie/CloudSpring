@@ -31,10 +31,22 @@
         <module>CloudZookeeper</module>
         <module>CloudGateway</module>
         <module>CloudPortal</module>
+        <module>CloudBus</module>
+        <module>CloudStream</module>
     </modules>
+
+    <dependencies>
+        <!--Lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+    </dependencies>
 
     <dependencyManagement>
         <dependencies>
+            <!--SpringCloud-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -42,6 +54,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <!--Swagger-->
             <dependency>
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger2</artifactId>
@@ -50,6 +63,31 @@
             <dependency>
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger-ui</artifactId>
+                <version>RELEASE</version>
+            </dependency>
+            <!--Zookeeper-->
+            <dependency>
+                <groupId>org.apache.zookeeper</groupId>
+                <artifactId>zookeeper</artifactId>
+                <version>RELEASE</version>
+            </dependency>
+            <!--Curator-->
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>apache-curator</artifactId>
+                <version>RELEASE</version>
+                <type>pom</type>
+            </dependency>
+            <!--Jedis-->
+            <dependency>
+                <groupId>redis.clients</groupId>
+                <artifactId>jedis</artifactId>
+                <version>RELEASE</version>
+            </dependency>
+            <!--Redisson-->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
                 <version>RELEASE</version>
             </dependency>
         </dependencies>
